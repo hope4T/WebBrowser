@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcc-mo-XGq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem id="QUw-ez-a65"/>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efU-Lj-Sll">
+                                <rect key="frame" x="0.0" y="88" width="600" height="468"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rf5-6O-kRS"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hga-xc-nkd">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="o4s-dE-LGu"/>
+                                </connections>
+                            </toolbar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zzu-1M-beg">
+                                <rect key="frame" x="0.0" y="44" width="600" height="44"/>
+                                <animations/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cfo-8Q-7Ds"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dcc-mo-XGq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1Rj-Sj-BFk"/>
+                            <constraint firstItem="efU-Lj-Sll" firstAttribute="top" secondItem="zzu-1M-beg" secondAttribute="bottom" id="28u-xf-pbu"/>
+                            <constraint firstItem="efU-Lj-Sll" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="79Y-VW-CS7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="efU-Lj-Sll" secondAttribute="trailing" constant="-20" id="7sI-e9-u3M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zzu-1M-beg" secondAttribute="trailing" constant="-20" id="97y-3t-EBm"/>
+                            <constraint firstItem="efU-Lj-Sll" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="E3H-YD-V08"/>
+                            <constraint firstItem="zzu-1M-beg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ewq-If-IM3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hga-xc-nkd" secondAttribute="bottom" id="I45-jf-7Ak"/>
+                            <constraint firstItem="Hga-xc-nkd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="JBB-LY-uKk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hga-xc-nkd" secondAttribute="trailing" constant="-20" id="KxV-c8-0QI"/>
+                            <constraint firstItem="zzu-1M-beg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="TR7-Vi-ih5"/>
+                            <constraint firstItem="Hga-xc-nkd" firstAttribute="top" secondItem="efU-Lj-Sll" secondAttribute="bottom" id="aWd-rS-Aht"/>
+                            <constraint firstItem="zzu-1M-beg" firstAttribute="top" secondItem="Dcc-mo-XGq" secondAttribute="bottom" id="acx-QR-9QL"/>
+                            <constraint firstItem="Dcc-mo-XGq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bU7-bw-cbN"/>
+                            <constraint firstItem="Dcc-mo-XGq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nnP-6G-Fb2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dcc-mo-XGq" secondAttribute="trailing" constant="-20" id="npI-SB-Ff1"/>
+                            <constraint firstItem="Hga-xc-nkd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oBv-kZ-4OT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleItem" destination="QUw-ez-a65" id="tWj-re-iRp"/>
+                        <outlet property="toolBar" destination="Hga-xc-nkd" id="OP5-3A-dvY"/>
+                        <outlet property="urlBar" destination="zzu-1M-beg" id="S19-Ov-eia"/>
+                        <outlet property="webView" destination="efU-Lj-Sll" id="5Wd-U1-0dQ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="403" y="429"/>
+        </scene>
+    </scenes>
+</document>
